@@ -1,0 +1,26 @@
+using System;
+
+class MainClass {
+    public static void Main (string[] args) {
+        // Declarando as variáveis
+        int codigo_peca1, num_peca1, codigo_peca2, num_peca2;
+        float valor_unitario1, valor_unitario2;
+
+        // Lendo os dados da entrada
+        string[] entrada1 = Console.ReadLine().Split();
+        codigo_peca1 = int.Parse(entrada1[0]);
+        num_peca1 = int.Parse(entrada1[1]);
+        valor_unitario1 = float.Parse(entrada1[2]);
+
+        string[] entrada2 = Console.ReadLine().Split();
+        codigo_peca2 = int.Parse(entrada2[0]);
+        num_peca2 = int.Parse(entrada2[1]);
+        valor_unitario2 = float.Parse(entrada2[2]);
+
+        // Calculando o valor total a pagar
+        float total_a_pagar = (num_peca1 * valor_unitario1) + (num_peca2 * valor_unitario2);
+
+        // Mostrando o resultado formatado
+        Console.WriteLine("VALOR A PAGAR: R$ " + total_a_pagar.ToString("F2"));
+    }
+}
