@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+  int a, b, opção;
+  int i = 1;
+  while (i < 2) {
+    printf("deseja fazer alguma operação?\n");
+    printf("1 - sim\n");
+    printf("2 - não\n");
+    scanf("%d", &i);
+    if (i == 1) {
+      printf("digite o primeiro numero \n");
+      scanf("%d", &a);
+      printf("digite o segundo numero \n");
+      scanf("%d", &b);
+
+      printf("selecione a operação\n");
+      printf("1-soma\n2-subtração\n3-multi\n4-div\n");
+      scanf("%d", &opção);
+
+      switch (opção) {
+      case 1:
+        printf("%d \n", a + b);
+        break;
+      case 2:
+        printf("%d \n", a - b);
+        break;
+      case 3:
+        printf("%d \n", a * b);
+        break;
+      case 4:
+        printf("%d \n", a / b);
+        break;
+      }
+    } else {
+      i == 2;
+    }
+  }
+  return 0;
+}
