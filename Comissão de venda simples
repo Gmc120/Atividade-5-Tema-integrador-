@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  int venda, salario, salarioI;
+  printf("qual seu salário?\n");
+  scanf("%d", &salarioI);
+  printf("quanto foi sua venda?\n");
+  scanf("%d", &venda);
+  if (venda > 55000 && venda < 100000) {
+    salario = venda * 0.02;
+    printf("seu salario é: %d ", salario);
+  } else if (venda > 100000) {
+    salario = 5000;
+    printf("sua comissao é: %d ", salario);
+  } else {
+    salario = 100;
+    printf("sua comissao é: %d ", salario);
+  }
+  printf("Seu salário + comissão é: %d", salarioI + salario);
+}
